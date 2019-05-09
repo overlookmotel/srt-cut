@@ -9,9 +9,44 @@
 
 ## Usage
 
-This module is under development and not ready for use yet.
+### ```srtCut(path, outputs [, options])```
+
+Provide an existing SRT subtitle file and array of cut points. The SRT file will be cut up into several new SRT files.
+
+Timecodes in output files will be relative to the start point of each file.
+
+```js
+const srtCut = require('srt-cut');
+
+await srtCut(
+  '/path/to/input/subtitle/file.srt',
+  [
+    {
+      start: '00:00:00:00',
+	  path: '/path/to/1st/output.srt'
+    },
+    {
+      start: '00:04:40:00',
+	  path: '/path/to/2nd/output.srt'
+    },
+    {
+      start: '00:12:10:00',
+	  path: '/path/to/3rd/output.srt'
+    }
+  ],
+  {
+    frameRate: 25
+  }
+);
+```
+
+`start` can be provided as integer (milliseconds), or timecode in either SMTPE format (`00:00:00:00`) or SRT-style format (`00:00:00.000`).
+
+Options object is optional. `options.frameRate` defaults to `25`. Frame rate is only used if using SMTPE timecode to specify cut points.
 
 ## Tests
+
+There are no tests at present. But it works fine!
 
 Use `npm test` to run the tests. Use `npm run cover` to check coverage.
 
