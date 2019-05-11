@@ -1,6 +1,6 @@
 {
   "name": "srt-cut",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cut up SRT subtitle file into parts",
   "main": "index.js",
   "author": {
