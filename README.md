@@ -23,15 +23,15 @@ await srtCut(
   [
     {
       start: '00:00:00:00',
-	  path: '/path/to/1st/output.srt'
+      path: '/path/to/1st/output.srt'
     },
     {
       start: '00:04:40:00',
-	  path: '/path/to/2nd/output.srt'
+      path: '/path/to/2nd/output.srt'
     },
     {
       start: '00:12:10:00',
-	  path: '/path/to/3rd/output.srt'
+      path: '/path/to/3rd/output.srt'
     }
   ],
   {
