@@ -40,7 +40,7 @@ await srtCut(
 );
 ```
 
-`start` can be provided as integer (milliseconds), or timecode in either SMTPE format (`00:00:00:00`) or SRT-style format (`00:00:00.000`).
+`start` can be provided as integer (milliseconds), or timecode in either SMTPE format (`00:00:00:00`) or SRT-style format (`00:00:00,000`).
 
 Options object is optional. `options.frameRate` defaults to `25`. Frame rate is only used if using SMTPE timecode to specify cut points.
 
