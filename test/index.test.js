@@ -6,7 +6,7 @@
 'use strict';
 
 // Modules
-const srtCut = require('../index');
+const srtCut = require('../index.js');
 
 // Init
 require('./support/index.js');
