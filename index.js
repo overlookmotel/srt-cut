@@ -6,7 +6,8 @@
 
 // Modules
 const subtitle = require('subtitle'),
-	fs = require('fs-extra');
+	fs = require('fs-extra'),
+	padLeft = require('pad-left');
 
 // Exports
 /**
@@ -85,9 +86,8 @@ function timecodeToMs(tc, frameRate) {
 	// Convert SMTPE timecode to SRT-style timecode
 	const match = tc.match(/^(\d\d:\d\d:\d\d):(\d\d)$/);
 	if (match) {
-		let ms = `${Math.floor(match[2] * 1 / frameRate * 1000)}`;
-		while (ms.length < 3) ms = `${ms}0`;
-		tc = `${match[1]},${ms}`;
+		const ms = Math.floor((match[2] * 1000) / frameRate);
+		tc = `${match[1]},${padLeft(ms, 3, '0')}`;
 	}
 
 	return subtitle.toMS(tc);
