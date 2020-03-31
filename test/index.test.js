@@ -9,7 +9,7 @@
 const srtCut = require('../index');
 
 // Init
-require('./utils');
+require('./support/index.js');
 
 // Tests
 
