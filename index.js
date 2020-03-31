@@ -49,7 +49,7 @@ module.exports = async function srtCut(path, parts, options) {
 
 	for (const sub of subs) {
 		const {start} = sub;
-		if (start >= partEnd) {
+		while (start >= partEnd) {
 			partIndex++;
 			partSubs = parts[partIndex].subs;
 			partStart = partEnd;
@@ -64,6 +64,9 @@ module.exports = async function srtCut(path, parts, options) {
 
 	// Write out files
 	for (const part of parts) {
+		// Skip if no subs for part
+		if (part.subs.length === 0) continue;
+
 		// Convert to SRT file
 		const txtOut = subtitle.stringify(part.subs);
 		await fs.writeFile(part.path, txtOut);
