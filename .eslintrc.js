@@ -1,4 +1,11 @@
+/* --------------------
+ * srt-cut module
+ * ESLint config
+ * ------------------*/
+
 'use strict';
+
+// Exports
 
 module.exports = {
 	extends: [
