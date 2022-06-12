@@ -14,7 +14,7 @@
     "url": "https://github.com/overlookmotel/srt-cut/issues"
   },
   "dependencies": {
-    "fs-extra": "^9.0.0",
+    "fs-extra": "^10.0.0",
     "pad-left": "^2.1.0",
     "subtitle": "^2.0.3"
   },
